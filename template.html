@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+        .                                 .o8       oooo
+      .o8                                "888       `888
+    .o888oo oooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+      888   `888  `888  `888P"Y88bP"Y88b  d88' `88b  888  `888""8P
+      888    888   888   888   888   888  888   888  888   888
+      888 .  888   888   888   888   888  888   888  888   888    .o.
+      "888"  `V88V"V8P' o888o o888o o888o `Y8bod8P' o888o d888b   Y8P
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/functions.js" type="text/javascript"></script>
+    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/config.js" type="text/javascript"></script>
+
+    <!-- DEFAULT VARIABLES -->
+    <meta name="color:Background" content="#3b627e" />
+    <meta name="color:Secondary" content="#dc0000" />
+    <meta name="font:Title" content="Arial" />
+    <meta name="font:Body" content="Arial" />
+    <meta name="font:Accent" content="Lucida Sans" />
+    <meta name="if:Show People I Follow" content="1" />
+    <meta name="if:Show Tags" content="1" />
+    <meta name="if:Show Album Art on Audio Posts" content="1" />
+    <meta name="if:Enable Jump Pagination" content="0" />
+    <meta name="text:Disqus Shortname" content="" />
+    <meta name="image:Header" content="" />
+    <meta name="image:Background" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" >
+
+    <title>Club Name, About</title>
+
+    <link rel="shortcut icon" href="http://29.media.tumblr.com/avatar_d0f2ed4785e2_16.png" />
+    <link rel="apple-touch-icon" href="http://30.media.tumblr.com/avatar_d0f2ed4785e2_128.png"/>
+
+    <link rel="alternate" type="application/rss+xml" href="http://" + home_url + "/rss" />
+    <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/global.css" media="screen" rel="stylesheet" />
+    <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/red-and-black.css" media="screen" rel="stylesheet" />
+
+    <!--[if lt IE 7.]>
+        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE7.css" media="screen" rel="stylesheet" />
+    <![endif]-->
+
+    <!--[if lt IE 8.]>
+        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE8.css" media="screen" rel="stylesheet" />
+    <![endif]-->
+
+    <!--[if lt IE 9.]>
+	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/IE9.js"></script>
+	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/ie7-recalc.js"></script>
+    <![endif]-->
+
+    <meta http-equiv="x-dns-prefetch-control" content="off"/>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25257788-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="title">
+            <a href="/" target="_top">
+                <img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/nsc_header.jpg" alt="Club Name Logo" Title="Club Name" />
+            </a>
+        </div>
+        <div id="content">
+            <div class="post">
+
+                <!-- BEGIN PAGE CONTENT -->
+                <div id="includePlaceHolder"></div>
+
+                <script type="text/javascript">
+                    var parentDocument = window.parent.document;
+                    var includeNode = parentDocument.getElementById("includeContent");
+
+
+                    // This is a Hack for IE
+                    var importedContent;
+					if(document.importNode) {
+					    importedContent = parentDocument.importNode(includeNode, true);
+					} else {
+					    importedContent = parentDocument._importNode(includeNode, true);
+					}
+
+                    var placeHolder=window.document.getElementById("includePlaceHolder");
+                    placeHolder.parentNode.replaceChild(importedContent, placeHolder);
+                    if(document.recalc) {
+                        document.recalc();
+                    }
+                </script>
+
+                <!-- END PAGE CONTENT -->
+
+                <div class="footer " style="display:none;">
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <div id="sidebar">
+        <div id="top">
+             <div id="description"></div>
+                 <div id="pages">
+                     <a href="/home" class="page" target="_top">Home</a>
+                     <a href="/about" class="page" target="_top">About NSC</a>
+                     <a href="/policies" class="page" target="_top">Club Policies</a>
+                     <a href="/board" class="page" target="_top">Board of Directors</a>
+                     <a href="/tagged/news" class="page" target="_top">Club News</a>
+                     <a href="/calendar" class="page" target="_top">Club Calendar</a>
+                     <a href="/tryouts" class="page" target="_top">Registration &amp; Tryouts</a>
+                     <a href="/teams" class="page" target="_top">Teams &amp; Standings</a>
+                     <a href="/fields" class="page" target="_top">Fields &amp; Directions</a>
+                     <a href="/faqs" class="page" target="_top">FAQs</a>
+                     <a href="/coaches" class="page" target="_top">Coaches</a>
+                     <a href="/players" class="page" target="_top">Players</a>
+                     <a href="/gear" class="page" target="_top">NSC Gear</a>
+                     <a href="/gallery" class="page" target="_top">Photos</a>
+                     <a href="http://www.naparkandrecreation.com/index.php?pr=Soccer" class="page" target="_blank">N. Attleboro Park & Rec.</a>
+                     <div class="clear"></div>
+                 </div>
+
+                 <div id="events">
+                     <a href="/tagged/news">Events</a>
+                     <div id="event">
+                         <!--Featured Event Here-->
+                         <a href="https://registration.challengersports.com/FindACamp/FindACampDefault.asp?IdS=0007AB-3C64AC0&~=" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/events/ChallengerBanner.jpg" width="200" alt="Challenger Sports British Soccer Camp Logo" title="Challenger Sports British Soccer Camp"/></a>
+                     </div>
+                 </div>
+
+                 <div id="league">
+                     <a href="http://www.bays.org" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/logos/bays.gif" width="128" alt="BAYS Logo" Title="Boston Area Youth Soccer League"/></a>
+                 </div>
+
+                 <div id="social">
+                     Social
+                     <div id="facebook">
+                         <div id="facebook_include">
+                             <iframe src="http://www.facebook.com/plugins/like.php?app_id=261859263843227&amp;href=http%3A%2F%2Fwww.facebook.com%2Fgroups%2F278373512245&amp;send=false&amp;layout=standard&amp;width=195&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:80px;" allowTransparency="true"></iframe>
+                         </div>
+                         <div class="button" id="button-facebook">
+                             <a href="http://www.facebook.com/groups/278373512245/" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/icons/facebook.gif" alt="Facebook Icon" title="Facebook" /></a>
+                         </div>
+                         <div class="button" id="button-twitter">
+                             <a href="http://www.twitter.com" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/icons/twitter.gif" alt="Twitter Icon" title="Twitter" /></a>
+                         </div>
+                     </div>
+                  </div>
+
+                  <div id="search">
+                       Search
+                      <div id="google">
+                          <!-- Google Custom Search Element -->
+                          <div id="cse" style="width:100%;">Loading</div>
+                          <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+                          <script type="text/javascript">google.load('search', '1');google.setOnLoadCallback(function(){var cse = new google.search.CustomSearchControl();cse.draw('cse');}, true);</script>
+                      </div>
+                      <!--
+                      <form action="/search" method="get" id="search-form">
+                          <input type="hidden" name="t" value="northsoccer" />
+                          <input type="hidden" name="scope" id="search_scope" value="my_posts" />
+                          <input type="text" name="q" id="search_query" class="query" value="" />
+                          <input type="submit" value="Search" class="submit" />
+                          <div class="clear"></div>
+                      </form>
+                      -->
+                  </div>
+
+                  <div id="sponsors">
+                      Sponsors
+                      <div id="sponsor">
+                          <a href="#" name="sponsorLink" id="sponsorLink" target="_blank"><img name="sponsorLogo" id="sponsorLogo" src="" alt="Sponsor Logo" title="Sponsor" /></a>
+                      </div>
+
+                      <script type="text/javascript">
+                          rotateSponsors(Math.floor(Math.random() * eval("sponsorArray").length));
+                      </script>
+                  </div>
+
+                  <div id="buttons">
+                      <div class="row">
+                          <div class="button" id="button-archive"><a href="/archive" target="_top">Archive</a></div>
+                          <div class="button" id="button-rss"><a href="/rss" target="_top">RSS feed</a></div>
+                      </div>
+                      <div class="clear"></div>
+                      <div class="row">
+                          <div class="button" id="button-mobile"><a href="/mobile" target="_top">Mobile</a></div>
+                          <div class="button" id="button-random"><a href="/contact" target="_top">Contact Us</a></div>
+                      </div>
+                      <div class="clear"></div>
+                  </div>
+              </div>
+              <div id="bottom"></div>
+              <div id="copyright">
+                  <!--Club is a 501c3 recognized non-profit organization.<br/>-->
+                  &copy; {CopyrightYears} All rights reserved.
+              </div>
+          </div>
+          <div class="clear"></div>
+      </div>
+
+      <!-- BEGIN TUMBLR CODE -->
+      <iframe src="http://assets.tumblr.com/iframe.html?9&src=http%3A%2F%2Fnorthsoccer.tumblr.com%2Fabout&amp;lang=en_US&amp;name=northsoccer&amp;brag=0" scrolling="no" width="330" height="25" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe>
+      <!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><script type="text/javascript">_qoptions={qacct:"p-19UtqE8ngoZbM"};</script>
+      <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+      <noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" alt=""/></noscript>
+      <!-- END TUMBLR CODE -->
+
+  </body>
+</html>

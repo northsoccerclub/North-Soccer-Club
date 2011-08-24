@@ -1,0 +1,10 @@
+SEO
+-------------
+http://steve-adams.tumblr.com/sitemap1.xml
+http://www.bing.com/webmaster/
+http://www.google.com/webmasters/tools/
+https://siteexplorer.search.yahoo.com/
+
+http://www.tumblr.com/customize?redirect_to=http%3A%2F%2Fsteve-adams.tumblr.com%2F
+
+C70E0F

@@ -1,0 +1,19 @@
+
+            #wrapper #content .bottom {
+                background: transparent;
+            }
+
+            #wrapper #content .post .footer {
+                background: transparent;
+                color: #000;
+            }
+
+            #wrapper #content .post .audio {
+                float: none;
+                background: transparent;
+            }
+
+            #wrapper #content .post .notecontainer .notes {
+                padding: 0;
+                margin: 0;
+            }

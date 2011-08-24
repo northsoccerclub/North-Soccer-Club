@@ -1,0 +1,33 @@
+            #wrapper #sidebar #bottom {
+                background: transparent;
+            }
+
+            #wrapper #sidebar #top #avatar {
+                background: none;
+            }
+
+            #wrapper #sidebar #top #avatar img {
+                border: 5px solid #f1f1f1;
+            }
+
+            #wrapper #sidebar #top .heading#followontumblr {
+                background-image: none;
+                text-indent: 0;
+            }
+
+            #wrapper #sidebar #top .heading#twitter {
+                background-image: none;
+            }
+
+            #wrapper #sidebar #top .heading#following {
+                background-image: none;
+            }
+
+            #wrapper #content .post .audio .player {
+                float: none;
+            }
+
+            #wrapper #content .post .audio .meta {
+                display: none;
+                float: none;
+            }

@@ -1,0 +1,28 @@
+
+
+@import url("http://dl.dropbox.com/u/3192643/nsc/global.css");
+<iframe src="" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:520px;" allowTransparency="true"></iframe>
+
+document.write('<iframe src=\"' + page + '.inc\" scrolling=\"no\" width=\"100%\" height=\"100%\" frameborder=\"0\" style=\"border:none; overflow:hidden;\" allowTransparency=\"true\"></iframe>');
+
+
+html,body{width:100%;height:100%;margin:0px;padding:0px;
+
+
+
+ var page = window.parent.location.href;                                     
+                  page = page.substring(page.lastIndexOf("/")+1);
+//document.write('<iframe src=\"/' + page + '.inc\" scrolling=\"no\" width=\"100%\" height=\"100%\" frameborder=\"0\" noresize></iframe>');
+
+// This is a Hack for IE
+if(document.importNode) {
+    var elemClone = document.importNode(elemChild, true);
+} else {
+    var elemClone = document._importNode(elemChild, true);
+}
+
+<!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
