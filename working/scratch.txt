@@ -26,3 +26,89 @@ if(document.importNode) {
 <![endif]-->
 
 <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+
+    <script type="text/javascript">
+        /* is this stuff defined? */
+        if (!document.ELEMENT_NODE) {
+            document.ELEMENT_NODE = 1;
+            document.ATTRIBUTE_NODE = 2;
+            document.TEXT_NODE = 3;
+            document.CDATA_SECTION_NODE = 4;
+            document.ENTITY_REFERENCE_NODE = 5;
+            document.ENTITY_NODE = 6;
+            document.PROCESSING_INSTRUCTION_NODE = 7;
+            document.COMMENT_NODE = 8;
+            document.DOCUMENT_NODE = 9;
+            document.DOCUMENT_TYPE_NODE = 10;
+            document.DOCUMENT_FRAGMENT_NODE = 11;
+            document.NOTATION_NODE = 12;
+        }
+
+        document._importNode = function(node, allChildren) {
+            /* find the node type to import */
+            switch (node.nodeType) {
+                case document.ELEMENT_NODE:
+                    /* create a new element */
+                    var newNode = document.createElement(node.nodeName);
+                    /* does the node have any attributes to add? */
+                    if (node.attributes && node.attributes.length > 0)
+                        /* add all of the attributes */
+                        for (var i = 0, il = node.attributes.length; i < il;)
+                            newNode.setAttribute(node.attributes[i].nodeName, node.getAttribute(node.attributes[i++].nodeName));
+                    /* are we going after children too, and does the node have any? */
+                    if (allChildren && node.childNodes && node.childNodes.length > 0)
+                        /* recursively get all of the child nodes */
+                        for (var i = 0, il = node.childNodes.length; i < il;)
+                            newNode.appendChild(document._importNode(node.childNodes[i++], allChildren));
+                    return newNode;
+                    break;
+                case document.TEXT_NODE:
+                case document.CDATA_SECTION_NODE:
+                case document.COMMENT_NODE:
+                    return document.createTextNode(node.nodeValue);
+                    break;
+           }
+       };
+    </script>
+    
+    
+                        // This is a Hack for IE
+                        var importedContent;
+    					if(document.importNode) {
+    					    importedContent = parentDocument.importNode(includeNode, true);
+    					} else {
+    					    importedContent = parentDocument._importNode(includeNode, true);
+    					}
+    
+                        var placeHolder=window.document.getElementById("includePlaceHolder");
+    
+                        placeHolder.appendChild(importedContent);
+                        if (!document.importedContent) {
+    					    document.getElementById('includePlaceHolder').innerHTML = document.getElementById('includePlaceHolder').innerHTML;
+    					}
+    
+                        //placeHolder.parentNode.replaceChild(importedContent, placeHolder);
+    
+                        if(document.recalc) {
+                            document.recalc();
+                    }
+                    
+                    
+    <!--[if lt IE 7.]>
+        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE7.css" media="screen" rel="stylesheet" />
+    <![endif]-->
+
+    <!--[if lt IE 8.]>
+        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE8.css" media="screen" rel="stylesheet" />
+    <![endif]-->
+
+    <!--[if lt IE 9.]>
+	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/IE9.js"></script>
+	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/ie7-recalc.js"></script>
+    <![endif]-->
+    
+                                 <iframe src="http://www.facebook.com/plugins/like.php?app_id=261859263843227&amp;href=http%3A%2F%2Fwww.facebook.com%2Fgroups%2F278373512245&amp;send=false&amp;layout=standard&amp;width=195&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:80px;" allowTransparency="true"></iframe>
+
+
+        <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/xbImportNode.js" type="text/javascript"></script>

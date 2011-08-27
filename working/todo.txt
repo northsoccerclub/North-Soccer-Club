@@ -1,16 +1,13 @@
 
 print stylesheet
-weather
 
-gmail (calendar)
-google analytics
-dropbox
+weather
+twitter
+
 goDaddy
 facebook
-git
 
 paypal
-twitter
 Other Social - Flickr / Youtube ?
 
 

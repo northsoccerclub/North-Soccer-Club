@@ -10,9 +10,17 @@
 -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
     <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/functions.js" type="text/javascript"></script>
     <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/config.js" type="text/javascript"></script>
+    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/xbImportNode.js" type="text/javascript"></script>
+    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/DOM_print.js" type="text/javascript"></script>
+    <!--[if lt IE 7]>
+        <script src="ie7/IE9.js" type="text/javascript"></script>
+        <script src="ie7/ie7-squish.js" type="text/javascript"></script>
+        <script src="ie7/ie7-recalc.js" type="text/javascript"></script>
+    <![endif]-->
 
     <!-- DEFAULT VARIABLES -->
     <meta name="color:Background" content="#3b627e" />
@@ -30,7 +38,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" >
 
     <title>Club Name, About</title>
 
@@ -40,19 +47,6 @@
     <link rel="alternate" type="application/rss+xml" href="http://" + home_url + "/rss" />
     <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/global.css" media="screen" rel="stylesheet" />
     <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/red-and-black.css" media="screen" rel="stylesheet" />
-
-    <!--[if lt IE 7.]>
-        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE7.css" media="screen" rel="stylesheet" />
-    <![endif]-->
-
-    <!--[if lt IE 8.]>
-        <link href="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/css/IE8.css" media="screen" rel="stylesheet" />
-    <![endif]-->
-
-    <!--[if lt IE 9.]>
-	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/IE9.js"></script>
-	    <script src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/scripts/ie7-recalc.js"></script>
-    <![endif]-->
 
     <meta http-equiv="x-dns-prefetch-control" content="off"/>
 
@@ -80,26 +74,19 @@
             <div class="post">
 
                 <!-- BEGIN PAGE CONTENT -->
-                <div id="includePlaceHolder"></div>
+                <div id="includePlaceHolder">
+
+			    </div>
 
                 <script type="text/javascript">
-                    var parentDocument = window.parent.document;
-                    var includeNode = parentDocument.getElementById("includeContent");
 
-
-                    // This is a Hack for IE
-                    var importedContent;
-					if(document.importNode) {
-					    importedContent = parentDocument.importNode(includeNode, true);
-					} else {
-					    importedContent = parentDocument._importNode(includeNode, true);
-					}
-
-                    var placeHolder=window.document.getElementById("includePlaceHolder");
-                    placeHolder.parentNode.replaceChild(importedContent, placeHolder);
-                    if(document.recalc) {
-                        document.recalc();
+                    importedNode  = document._importNode(window.parent.document.getElementById("includeContent"), true);
+                    document.getElementById('includePlaceHolder').innerHTML = '';
+                    document.getElementById('includePlaceHolder').appendChild(importedNode);
+                    if (!document.importNode) {
+                       document.getElementById('includePlaceHolder').innerHTML = document.getElementById('includePlaceHolder').innerHTML;
                     }
+
                 </script>
 
                 <!-- END PAGE CONTENT -->
@@ -128,7 +115,7 @@
                      <a href="/players" class="page" target="_top">Players</a>
                      <a href="/gear" class="page" target="_top">NSC Gear</a>
                      <a href="/gallery" class="page" target="_top">Photos</a>
-                     <a href="http://www.naparkandrecreation.com/index.php?pr=Soccer" class="page" target="_blank">N. Attleboro Park & Rec.</a>
+                     <a href="http://www.naparkandrecreation.com/index.php?pr=Soccer" class="page" target="_blank">N. Attleboro Park &amp; Rec.</a>
                      <div class="clear"></div>
                  </div>
 
@@ -136,7 +123,7 @@
                      <a href="/tagged/news">Events</a>
                      <div id="event">
                          <!--Featured Event Here-->
-                         <a href="https://registration.challengersports.com/FindACamp/FindACampDefault.asp?IdS=0007AB-3C64AC0&~=" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/events/ChallengerBanner.jpg" width="200" alt="Challenger Sports British Soccer Camp Logo" title="Challenger Sports British Soccer Camp"/></a>
+                         <a href="https://registration.challengersports.com/FindACamp/FindACampDefault.asp?IdS=0007AB-3C64AC0&~=" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/events/ChallengerBanner.jpg" width="215" alt="Challenger Sports British Soccer Camp Logo" title="Challenger Sports British Soccer Camp"/></a>
                      </div>
                  </div>
 
@@ -148,13 +135,14 @@
                      Social
                      <div id="facebook">
                          <div id="facebook_include">
-                             <iframe src="http://www.facebook.com/plugins/like.php?app_id=261859263843227&amp;href=http%3A%2F%2Fwww.facebook.com%2Fgroups%2F278373512245&amp;send=false&amp;layout=standard&amp;width=195&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:80px;" allowTransparency="true"></iframe>
+                             <!-- <iframe src="http://www.facebook.com/plugins/like.php?app_id=261859263843227&amp;href=http%3A%2F%2Fwww.facebook.com%2Fgroups%2F278373512245&amp;send=false&amp;layout=standard&amp;width=195&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:195px; height:80px;" allowTransparency="true"></iframe> -->
+                             <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=261859263843227&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/groups/278373512245" send="false" width="195" show_faces="true" font="arial"></fb:like>
                          </div>
                          <div class="button" id="button-facebook">
                              <a href="http://www.facebook.com/groups/278373512245/" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/icons/facebook.gif" alt="Facebook Icon" title="Facebook" /></a>
                          </div>
                          <div class="button" id="button-twitter">
-                             <a href="http://www.twitter.com" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/icons/twitter.gif" alt="Twitter Icon" title="Twitter" /></a>
+                             <a href="http://twitter.com/#!/northsoccerclub" target="_blank"><img src="http://dl.dropbox.com/u/39166207/northsoccerclub.com/resources/images/icons/twitter.gif" alt="Twitter Icon" title="Twitter" /></a>
                          </div>
                      </div>
                   </div>
