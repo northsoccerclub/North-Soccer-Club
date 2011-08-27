@@ -1,13 +1,14 @@
-table {
+
+#red-and-black table { 
 	width: 620px;
 	border:1px solid #000000;
-	border-spacing: 0px; }
+	border-spacing: 0px; } 
 
-table a, table, tbody, tfoot, tr, th, td {
+#red-and-black table a, #red-and-black table, #red-and-black tbody, #red-and-black tfoot, #red-and-black tr, #red-and-black th, #red-and-black td {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-table caption {
+#red-and-black table caption {
 	font-size: 1.6em;
 	text-align: left;
 	text-indent: 50px;
@@ -18,7 +19,7 @@ table caption {
 	padding-top: 7px;
 	border:1px solid #000000; }
 
-thead th {
+#red-and-black thead th {
 	background: url(../themes/red-and-black/bg_th.gif) left;
 	height: 21px;
 	color: #FFFFFF;
@@ -29,21 +30,21 @@ thead th {
 	margin: 20px 0px 0px;
 	text-align: left; }
 
-tbody tr {	background: #ffffff; }
+#red-and-black tbody tr {	background: #ffffff; }
 
-tbody tr.odd {	background: #f0f0f0; }
+#red-and-black tbody tr.odd {	background: #f0f0f0; }
 
-tbody th {
+#red-and-black tbody th {
 	background: url(../themes/red-and-black//arrow_white.gif) left center no-repeat;
 	background-position: 5px;
 	padding-left: 40px !important; }
 
-tbody tr.odd th {
+#red-and-black tbody tr.odd th {
 	background: url(../themes/red-and-black/arrow_grey.gif) left center no-repeat;
 	background-position: 5px;
 	padding-left: 40px !important; }
 
-tbody th, tbody td {
+#red-and-black tbody th, #red-and-black tbody td {
 	font-size: 0.8em;
 	line-height: 1.4em;
 	font-family: Arial, Helvetica, sans-serif;
@@ -52,39 +53,39 @@ tbody th, tbody td {
 	border-bottom: 1px solid #800000;
 	text-align: left; }
 
-tbody a {
+#red-and-black tbody a {
 	color: #000000;
 	font-weight: bold;
 	text-decoration: none; }
 
-tbody a:hover {
+#red-and-black tbody a:hover {
 	color: #ffffff;
 	text-decoration: underline; }
 
 /*
-tbody tr:hover th {
+#red-and-black tbody tr:hover th {
 	background: #1A1919 url(../themes/red-and-black/arrow_black.gif) left center no-repeat;
 	background-position: 5px;
 	color: #ffffff; }
 
-tbody tr.odd:hover th {
+#red-and-black tbody tr.odd:hover th {
 	background: #1A1919 url(../themes/red-and-black/arrow_black.gif) left center no-repeat;
 	background-position: 5px;
 	color: #ffffff; }
 
-tbody tr:hover th a, tr.odd:hover th a	{
+#red-and-black tbody tr:hover th a, tr.odd:hover th a	{
 		 color: #ffffff; }
 
-tbody tr:hover td, tr:hover td a, tr.odd:hover td, tr.odd:hover td a {
+#red-and-black tbody tr:hover td, tr:hover td a, tr.odd:hover td, tr.odd:hover td a {
 	background: #1A1919;
 	color: #ffffff;	 }
 
-tbody tr.odd:hover td, tr.odd:hover td a{
+#red-and-black tbody tr.odd:hover td, tr.odd:hover td a{
 	background: #1A1919;
 	color: #ffffff;	 }
 */
 
-tfoot th, tfoot td {
+#red-and-black tfoot th, tfoot td {
 	background: #ffffff url(../themes/red-and-black/bg_footer.gif) repeat-x bottom;
 	font-size: 0.8em;
 	color: #ffffff;
